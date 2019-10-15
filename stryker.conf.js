@@ -2,8 +2,8 @@ module.exports = function(config) {
   config.set({
     spec: [
       // Add your files here, this is just an example:
-      {pattern: 'test/**/*.js', mutated: true, included: false},
-      'test/**/*.js'
+      {pattern: 'test/**/*.ts', mutated: true, included: false},
+      'test/**/*.ts'
     ],
     mutator: "typescript",
     packageManager: "npm",
@@ -13,7 +13,7 @@ module.exports = function(config) {
     testFramework: "mocha",
     coverageAnalysis: "off",
     tsconfigFile: "tsconfig.json",
-    mutate: ["src/**/*.ts"],
+    mutate: ["test/**/*.ts"],
     mochaOptions: {
 			spec: ['test/**/*.ts'],
                         require: ['ts-node/register']
