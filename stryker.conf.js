@@ -8,6 +8,10 @@ module.exports = function(config) {
     testFramework: "mocha",
     coverageAnalysis: "perTest",
     tsconfigFile: "tsconfig.json",
-    mutate: ["src/**/*.ts"]
+    mutate: ["test/**/*.ts"],
+    mochaOptions: {
+			spec: ['test/**/*.ts'],
+                        require: ['ts-node/register']
+		},
   });
 };
