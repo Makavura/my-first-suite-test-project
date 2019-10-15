@@ -1,5 +1,10 @@
 module.exports = function(config) {
   config.set({
+    spec: [
+      // Add your files here, this is just an example:
+      {pattern: 'test/**/*.js', mutated: true, included: false},
+      'test/**/*.js'
+    ],
     mutator: "typescript",
     packageManager: "npm",
     reporters: ["html", "clear-text", "progress"],
