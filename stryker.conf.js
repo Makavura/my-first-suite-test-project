@@ -13,9 +13,9 @@ module.exports = function(config) {
     testFramework: "mocha",
     coverageAnalysis: "off",
     tsconfigFile: "tsconfig.json",
-    mutate: ["test/**/*.ts"],
+    mutate: ["src/**/*.ts"],
     mochaOptions: {
-			spec: ['test/**/*.ts'],
+			spec: ['test/**/*.spec.ts'],
                         require: ['ts-node/register']
     },
     maxConcurrentTestRunners: 2
