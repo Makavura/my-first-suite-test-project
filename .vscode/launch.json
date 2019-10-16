@@ -10,20 +10,22 @@
             "name": "Mocha Tests",
             "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
             "args": [
+                "--require", "ts-node/register",
                 "-u",
-                "tdd",
+                "bdd",
                 "--timeout",
                 "999999",
                 "--colors",
+                "--recursive",
                 "${workspaceFolder}/test/**/*.ts"
             ],
             "internalConsoleOptions": "openOnSessionStart"
         },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceFolder}/index.js"
-        }
+        // {
+        //     "type": "node",
+        //     "request": "launch",
+        //     "name": "Launch Program",
+        //     "program": "${workspaceFolder}/index.js"
+        // }
     ]
 }
